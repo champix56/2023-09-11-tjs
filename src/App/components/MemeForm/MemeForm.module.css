@@ -1,5 +1,7 @@
 .MemeForm {
     text-align: center;
+    height: 100%;
+    overflow-y: scroll;
 }
 .smallNumber{
     width: 50px;

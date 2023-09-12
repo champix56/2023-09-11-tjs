@@ -1,7 +1,7 @@
 .FlexH3G {
     display: flex;
     flex-direction: column;
-    height: 97vh;
+    height: calc(100vh - 150px);
 }
 .FlexH3G>*:nth-child(3){
     flex-grow: 1;
