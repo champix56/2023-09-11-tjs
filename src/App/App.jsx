@@ -28,7 +28,12 @@ const App = () => {
             image={images.find((img) => img.id === current.imageId)}
             basePath=""
           ></MemeViewer>
-          <MemeForm></MemeForm>
+          <MemeForm
+            meme={current}
+            onMemeChange={(newMeme) => {
+              setcurrent(newMeme);
+            }}
+          ></MemeForm>
         </FlexW1G>
         <Footer></Footer>
       </FlexH3G>
