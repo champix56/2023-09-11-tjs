@@ -6,17 +6,19 @@ import Footer from "./components/ui/Footer/Footer";
 import Navbar from "./components/ui/Navbar/Navbar";
 import Header from "./components/ui/Header/Header";
 import { MemeViewerStoredCurrent } from "./components/ui/MemeViewer/MemeViewer";
+import { MemeThumbnailStoredDatas } from "./components/MemeThumbnail/MemeThumbnail";
 const App = () => {
   return (
     <div className="App">
       <FlexH3G>
         <Header></Header>
         <Navbar></Navbar>
-        <FlexW1G>
+        {/* <FlexW1G>
           <MemeViewerStoredCurrent 
             basePath=""/>
           <MemeFormStoredData/>
-        </FlexW1G>
+        </FlexW1G> */}
+        <MemeThumbnailStoredDatas/>
         <Footer></Footer>
       </FlexH3G>
     </div>
