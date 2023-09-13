@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { REST_ADR } from "../constantes/constantes";
 
 const initialState = {
   memes: [],
@@ -29,6 +30,12 @@ const ressources = createSlice({
     },
   },
 });
+
+export const fetchAllRessources=createAsyncThunk('ressources/fetchAllRessources',async ()=>{
+    const pimages=await fetch(REST_ADR+'/images');
+    const images=await pimages.json();
+    return images;
+})
 
 export const { addImage, loadImagesFromArg } = ressources.actions;
 
