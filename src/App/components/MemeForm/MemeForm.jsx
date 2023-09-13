@@ -265,11 +265,13 @@ export const MemeFormStoredData=connect(mapDispatchToProps,mapStateToProps)(Meme
 export const MemeFormStoredData = (props) => {
   const dispatch = useDispatch();
   const images = useSelector((s) => s.ressources.images);
+  const c = useSelector((s) => s.current);
 
   return (
     <MemeForm
       {...props}
       images={images}
+      meme={c}
       onMemeChange={(newMeme) => {
         dispatch({ type: "current/change", payload: newMeme });
         //dispatch(changeCurrent(newMeme));
