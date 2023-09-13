@@ -29,6 +29,12 @@ const ressources = createSlice({
       state.images.push(...action.payload);
     },
   },
+  extraReducers(builder){
+    builder.addCase('ressources/fetchAllRessources/fulfilled',(state,action)=>{
+        state.images.splice(0);
+        state.images.push(...action.payload);
+    })
+  }
 });
 
 export const fetchAllRessources=createAsyncThunk('ressources/fetchAllRessources',async ()=>{
