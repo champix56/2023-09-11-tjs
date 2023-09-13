@@ -186,6 +186,21 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 9
+    },
+    {
+      "titre": "",
+      "text": "Hello World",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 2,
+      "color": "#000000",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 10
     }
   ]
 }
