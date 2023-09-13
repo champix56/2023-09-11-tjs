@@ -17,6 +17,6 @@ const current = createSlice({
   }
 });
 
-export const {clearCurrent,changeCurrent} = current.actions
+export const {clear,change} = current.actions
 
 export default current.reducer
