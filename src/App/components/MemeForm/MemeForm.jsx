@@ -2,10 +2,21 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./MemeForm.module.css";
 import Button from "../Button/Button";
+import { store } from "../../store/store";
 
 const memeFormInitialState = {};
 
 const MemeForm = (props) => {
+
+  const [images, setimages] = useState([]);
+useEffect(() => {
+  setimages(store.getState().ressources.images);
+  store.subscribe(()=>{
+    setimages(store.getState().ressources.images);
+  });
+}, [])
+
+
   return (
     <div className={styles.MemeForm} data-testid="MemeForm">
       <form
@@ -47,7 +58,7 @@ const MemeForm = (props) => {
           }}
         >
           <option value="-1">Pas d'image</option>
-          {props.images.map((e, i) => (
+          {images.map((e, i) => (
             <option key={'opt-img-'+i} value={e.id}>{e.titre}</option>
           ))}
         </select>
