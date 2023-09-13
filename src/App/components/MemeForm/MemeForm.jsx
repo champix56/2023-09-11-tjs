@@ -4,6 +4,7 @@ import styles from "./MemeForm.module.css";
 import Button from "../Button/Button";
 import { store } from "../../store/store";
 import { connect, useDispatch, useSelector } from "react-redux";
+import { change, saveCurrent } from "../../store/current";
 const memeFormInitialState = {};
 
 const MemeForm = (props) => {
@@ -15,6 +16,7 @@ const MemeForm = (props) => {
         }}
         onSubmit={(evt) => {
           evt.preventDefault();
+          props.onMemeSubmit(props.meme);
         }}
       >
         <label htmlFor="titre">
@@ -273,8 +275,12 @@ export const MemeFormStoredData = (props) => {
       images={images}
       meme={c}
       onMemeChange={(newMeme) => {
-        dispatch({ type: "current/change", payload: newMeme });
-        //dispatch(changeCurrent(newMeme));
+        //dispatch({ type: "current/change", payload: newMeme });
+        dispatch(change(newMeme));
+      }}
+      onMemeSubmit={(newMeme) => {
+        //dispatch({ type: "current/change", payload: newMeme });
+        dispatch(saveCurrent(newMeme));
       }}
     ></MemeForm>
   );

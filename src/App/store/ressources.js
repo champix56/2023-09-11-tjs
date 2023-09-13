@@ -39,6 +39,11 @@ const ressources = createSlice({
         state.memes.push(...action.payload.memes);
       }
     );
+    builder.addCase("current/save/fulfilled", (s, a) => {
+      const position=s.memes.findIndex(m=>m.id===a.payload.id)
+      if(position===-1)s.memes.push(a.payload);
+      else s.memes[position]=a.payload;
+    });
   },
 });
 

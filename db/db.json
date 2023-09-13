@@ -46,8 +46,8 @@
       "fontSize": 600,
       "underline": true,
       "italic": true,
-      "imageId": 1,
-      "color": "#a80000",
+      "imageId": 2,
+      "color": "#fbf4f4",
       "frameSizeX": 0,
       "frameSizeY": 600,
       "id": 0
@@ -171,6 +171,21 @@
       "frameSizeX": 0,
       "frameSizeY": 101,
       "id": 8
+    },
+    {
+      "titre": "",
+      "text": "Hello World",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 9
     }
   ]
 }
